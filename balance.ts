@@ -9,13 +9,11 @@ enum lists {
 }
 
 const contract = new web3.eth.Contract(lists.abi, lists.address);
-
-function getBalances() : void{
-    contract.methods.getBalance().call().then(bal => console.log(bal));
-}
-export const amount : number = 600;
+var balance : number;
+contract.methods.getBalance().call().then((bal : number)  => { balance = bal;console.log(bal)})
+export const amount : number = 400;
 export function setDeposit(amount: number) : void {
-    web3.eth.getAccounts().then(accounts => {
+    web3.eth.getAccounts().then((accounts :any[]) => {
         let acc = accounts[1];
         console.log(`..... the account money will fluctuate is ${acc}`);
         contract.methods.Deposit(amount).send({from : acc})
@@ -28,5 +26,5 @@ export function setWithdraw(amount : number) : void{
         contract.methods.Withdraw(amount).send({from : acc})
     })
 }
-setDeposit(amount);
-getBalances();
+setWithdraw(amount);
+console.log(`the balance is ${balance}`)

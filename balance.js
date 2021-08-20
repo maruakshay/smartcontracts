@@ -10,10 +10,9 @@ var lists;
     lists[lists["address"] = jsonFile.networks[5777].address] = "address";
 })(lists || (lists = {}));
 var contract = new web3.eth.Contract(lists.abi, lists.address);
-function getBalances() {
-    contract.methods.getBalance().call().then(function (bal) { return console.log(bal); });
-}
-exports.amount = 600;
+var balance;
+contract.methods.getBalance().call().then(function (bal) { balance = bal; console.log(bal); });
+exports.amount = 400;
 function setDeposit(amount) {
     web3.eth.getAccounts().then(function (accounts) {
         var acc = accounts[1];
@@ -30,5 +29,5 @@ function setWithdraw(amount) {
     });
 }
 exports.setWithdraw = setWithdraw;
-setDeposit(exports.amount);
-getBalances();
+setWithdraw(exports.amount);
+console.log("the balance is " + balance);

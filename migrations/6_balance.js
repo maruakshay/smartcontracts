@@ -1,3 +1,3 @@
-const balance = artifacts.require('Balance')
+const data = artifacts.require('Data')
 
-module.exports = (deployer) => deployer.deploy(balance);
+module.exports = (deployer) => deployer.deploy(data);

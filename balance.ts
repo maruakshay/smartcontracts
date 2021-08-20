@@ -8,9 +8,13 @@ enum lists {
     address = jsonFile.networks[5777].address
 }
 
-const contract = new web3.eth.Contract(lists.abi, lists.address);
-var balance : number;
-contract.methods.getBalance().call().then((bal : number)  => { balance = bal;console.log(bal)})
+export const contract = new web3.eth.Contract(lists.abi, lists.address);
+export function getBalances() : void {
+    contract.methods.getBalance().call().then((bal : number) =>
+    {
+        console.log(bal)
+    })
+}
 export const amount : number = 400;
 export function setDeposit(amount: number) : void {
     web3.eth.getAccounts().then((accounts :any[]) => {
@@ -26,5 +30,5 @@ export function setWithdraw(amount : number) : void{
         contract.methods.Withdraw(amount).send({from : acc})
     })
 }
-setWithdraw(amount);
-console.log(`the balance is ${balance}`)
+getBalances();
+

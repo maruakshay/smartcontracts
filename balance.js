@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.setWithdraw = exports.setDeposit = exports.amount = exports.getBalances = exports.contract = void 0;
+exports.setWithdraw = exports.getEthBalance = exports.setDeposit = exports.amount = exports.getBalances = exports.contract = void 0;
 var Web3 = require('web3');
 var jsonFile = require('./build/contracts/Data.json');
 var web3 = new Web3('http://127.0.0.1:8545');
@@ -19,18 +19,27 @@ exports.getBalances = getBalances;
 exports.amount = 400;
 function setDeposit(amount) {
     web3.eth.getAccounts().then(function (accounts) {
-        var acc = accounts[1];
+        var acc = accounts[0];
         console.log("..... the account money will fluctuate is " + acc);
         exports.contract.methods.Deposit(amount).send({ from: acc });
     });
 }
 exports.setDeposit = setDeposit;
+function getEthBalance() {
+    web3.eth.getAccounts().then(function (accounts) {
+        var account = accounts[0];
+        web3.eth.getBalance(account).then(function (balance) { return console.log(balance); });
+    });
+}
+exports.getEthBalance = getEthBalance;
 function setWithdraw(amount) {
     web3.eth.getAccounts().then(function (accounts) {
-        var acc = accounts[1];
+        var acc = accounts[0];
         console.log("..... the account  money will fluctutate is " + acc);
         exports.contract.methods.Withdraw(amount).send({ from: acc });
     });
 }
 exports.setWithdraw = setWithdraw;
 getBalances();
+getEthBalance();
+setDeposit(exports.amount);

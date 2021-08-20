@@ -18,17 +18,24 @@ export function getBalances() : void {
 export const amount : number = 400;
 export function setDeposit(amount: number) : void {
     web3.eth.getAccounts().then((accounts :any[]) => {
-        let acc = accounts[1];
+        let acc = accounts[0];
         console.log(`..... the account money will fluctuate is ${acc}`);
         contract.methods.Deposit(amount).send({from : acc})
     })
 }
+export function getEthBalance() : void {
+    web3.eth.getAccounts().then((accounts : any[]) => {
+        let account = accounts[0];
+        web3.eth.getBalance(account).then((balance: number) => console.log(balance));
+    })
+}
 export function setWithdraw(amount : number) : void{
     web3.eth.getAccounts().then(accounts => {
-        let acc = accounts[1];
+        let acc = accounts[0];
         console.log(`..... the account  money will fluctutate is ${acc}`);
         contract.methods.Withdraw(amount).send({from : acc})
     })
 }
 getBalances();
-
+getEthBalance();
+setDeposit(amount);

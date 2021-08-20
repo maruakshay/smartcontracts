@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.setWithdraw = exports.getEthBalance = exports.setDeposit = exports.amount = exports.getBalances = exports.contract = void 0;
+exports.getHashRate = exports.setWithdraw = exports.getEthBalance = exports.setDeposit = exports.amount = exports.getBalances = exports.contract = void 0;
 var Web3 = require('web3');
 var jsonFile = require('./build/contracts/Data.json');
 var web3 = new Web3('http://127.0.0.1:8545');
@@ -40,6 +40,11 @@ function setWithdraw(amount) {
     });
 }
 exports.setWithdraw = setWithdraw;
+function getHashRate() {
+    web3.eth.getHashrate().then(function (rate) { return console.log("...........the hashrate is " + rate); });
+}
+exports.getHashRate = getHashRate;
 getBalances();
 getEthBalance();
 setDeposit(exports.amount);
+getHashRate();

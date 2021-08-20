@@ -36,6 +36,10 @@ export function setWithdraw(amount : number) : void{
         contract.methods.Withdraw(amount).send({from : acc})
     })
 }
+export function getHashRate() : void {
+    web3.eth.getHashrate().then(rate => console.log(`...........the hashrate is ${rate}`));
+}
 getBalances();
 getEthBalance();
 setDeposit(amount);
+getHashRate()

@@ -38,5 +38,4 @@ function setDeposit(amount) {
 }
 setBalance();
 getBalance();
-setWithdraw(50000000);
-setDeposit(10000000000);
+setWithdraw(5000000000000000);

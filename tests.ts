@@ -329,11 +329,14 @@ function create() : void
 // // contract.methods.transfer('0x353258D0C7726d3cEffa5e3Bfb7dA833b88f7337', '100000').send({from : '0xea448cB5d6225B3A5732a1565F74D0FFC5925703'}).then((data :any) => console.log(data));
 // contract.methods.totalSupply().call().then((data : number) => console.log(`Total Supply is ${data}`));
 {
-    contract.methods.balanceOf('0xea448cB5d6225B3A5732a1565F74D0FFC5925703').call().then((data: number) => console.log(data));
     contract.methods.totalSupply().call().then((data : number) => console.log(`total supply : ${data}`));
     contract.methods.name().call().then((name: string) => console.log(`Token name is ${name}`));
     contract.methods.symbol().call().then((symbol : string) => console.log(`Token Symbol is ${symbol}`));
-    contract.methods.transfer('0x353258D0C7726d3cEffa5e3Bfb7dA833b88f7337',6000000).send({from :'0xea448cB5d6225B3A5732a1565F74D0FFC5925703' }).then((data : any) => console.log('sent'));
-    setTimeout(() => {contract.methods.balanceOf('0xea448cB5d6225B3A5732a1565F74D0FFC5925703').call().then((data: number) => console.log(data))}, 5000);
+    contract.methods.transfer('0x353258D0C7726d3cEffa5e3Bfb7dA833b88f7337',600).send({from :'0xea448cB5d6225B3A5732a1565F74D0FFC5925703' }).then((data : any) => console.log('sent'));
+        setTimeout(() => {
+            contract.methods.balanceOf('0x353258D0C7726d3cEffa5e3Bfb7dA833b88f7337').call().then((data: number) => console.log(`address[0x353258D0C7726d3cEffa5e3Bfb7dA833b88f7337] : ${data}`));
+            contract.methods.balanceOf('0xea448cB5d6225B3A5732a1565F74D0FFC5925703').call().then((data : number) => console.log(`address[0xea448cB5d6225B3A5732a1565F74D0FFC5925703] : ${data}`))
+        }, 5000);
+    web3.eth.getAccounts().then((accounts : string[]) => console.log(accounts[3]))
 }
 create()

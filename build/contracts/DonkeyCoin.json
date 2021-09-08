@@ -1,0 +1,2290 @@
+{
+  "contractName": "DonkeyCoin",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "User",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "donkeyCoin",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "tokenName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "tokenSymbol",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokens",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokens",
+          "type": "uint256"
+        }
+      ],
+      "name": "setTokens",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "seeTokens",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokens",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "getTokenFree",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"User\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"donkeyCoin\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"tokenName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"tokenSymbol\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"tokens\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokens\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getTokenFree\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"seeTokens\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokens\",\"type\":\"uint256\"}],\"name\":\"setTokens\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/DonkeyCoin.sol\":\"DonkeyCoin\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/DonkeyCoin.sol\":{\"keccak256\":\"0xc9ce4bf7e86ddf90b6a468972a7d52a0d03448bbd2aabe47025af077494496e4\",\"urls\":[\"bzz-raw://d03c302b24179391dce919ccea5cb8a3c5da9c89cbfe1cecec5e6c73f789b799\",\"dweb:/ipfs/QmX89CKcKntWHGKvHAX4BNrz3FxNztGR2LKCuUzahjub82\"]}},\"version\":1}",
+  "bytecode": "0x608060405233600460006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550735b38da6a701c568545dcfcb03fcb875f56beddc4600560006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055503480156100a657600080fd5b5061069b806100b66000396000f3fe60806040526004361061004a5760003560e01c806301a68a941461004f5780631429e26c1461015257806329fcea7b146101a95780632c014a9d146101f75780634317f54814610232575b600080fd5b34801561005b57600080fd5b5061006461025d565b604051808060200180602001848152602001838103835286818151815260200191508051906020019080838360005b838110156100ae578082015181840152602081019050610093565b50505050905090810190601f1680156100db5780820380516001836020036101000a031916815260200191505b50838103825285818151815260200191508051906020019080838360005b838110156101145780820151818401526020810190506100f9565b50505050905090810190601f1680156101415780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b34801561015e57600080fd5b506101676103a5565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101f5600480360360408110156101bf57600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103cb565b005b34801561020357600080fd5b506102306004803603602081101561021a57600080fd5b8101908080359060200190929190505050610426565b005b34801561023e57600080fd5b506102476105b5565b6040518082815260200191505060405180910390f35b6000806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102f75780601f106102cc576101008083540402835291602001916102f7565b820191906000526020600020905b8154815290600101906020018083116102da57829003601f168201915b505050505090806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103955780601f1061036a57610100808354040283529160200191610395565b820191906000526020600020905b81548152906001019060200180831161037857829003601f168201915b5050505050908060020154905083565b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b81600360008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550816000600201600082825403925050819055505050565b600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161461050b576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260158152602001807f796f7520617265206e6f742076616c696461746564000000000000000000000081525060200191505060405180910390fd5b6040518060400160405280600a81526020017f446f6e6b6579436f696e000000000000000000000000000000000000000000008152506000800190805190602001906105589291906105c1565b506040518060400160405280600381526020017f444b430000000000000000000000000000000000000000000000000000000000815250600060010190805190602001906105a79291906105c1565b508060006002018190555050565b60008060020154905090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061060257805160ff1916838001178555610630565b82800160010185558215610630579182015b8281111561062f578251825591602001919060010190610614565b5b50905061063d9190610641565b5090565b61066391905b8082111561065f576000816000905550600101610647565b5090565b9056fea265627a7a72315820d47cc8583190918e31d9372a332c3b25e8d7c6f2a54be13833ed7cd36788a57b64736f6c63430005100032",
+  "deployedBytecode": "0x60806040526004361061004a5760003560e01c806301a68a941461004f5780631429e26c1461015257806329fcea7b146101a95780632c014a9d146101f75780634317f54814610232575b600080fd5b34801561005b57600080fd5b5061006461025d565b604051808060200180602001848152602001838103835286818151815260200191508051906020019080838360005b838110156100ae578082015181840152602081019050610093565b50505050905090810190601f1680156100db5780820380516001836020036101000a031916815260200191505b50838103825285818151815260200191508051906020019080838360005b838110156101145780820151818401526020810190506100f9565b50505050905090810190601f1680156101415780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b34801561015e57600080fd5b506101676103a5565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101f5600480360360408110156101bf57600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103cb565b005b34801561020357600080fd5b506102306004803603602081101561021a57600080fd5b8101908080359060200190929190505050610426565b005b34801561023e57600080fd5b506102476105b5565b6040518082815260200191505060405180910390f35b6000806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102f75780601f106102cc576101008083540402835291602001916102f7565b820191906000526020600020905b8154815290600101906020018083116102da57829003601f168201915b505050505090806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103955780601f1061036a57610100808354040283529160200191610395565b820191906000526020600020905b81548152906001019060200180831161037857829003601f168201915b5050505050908060020154905083565b600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b81600360008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550816000600201600082825403925050819055505050565b600560009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600460009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161461050b576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260158152602001807f796f7520617265206e6f742076616c696461746564000000000000000000000081525060200191505060405180910390fd5b6040518060400160405280600a81526020017f446f6e6b6579436f696e000000000000000000000000000000000000000000008152506000800190805190602001906105589291906105c1565b506040518060400160405280600381526020017f444b430000000000000000000000000000000000000000000000000000000000815250600060010190805190602001906105a79291906105c1565b508060006002018190555050565b60008060020154905090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061060257805160ff1916838001178555610630565b82800160010185558215610630579182015b8281111561062f578251825591602001919060010190610614565b5b50905061063d9190610641565b5090565b61066391905b8082111561065f576000816000905550600101610647565b5090565b9056fea265627a7a72315820d47cc8583190918e31d9372a332c3b25e8d7c6f2a54be13833ed7cd36788a57b64736f6c63430005100032",
+  "sourceMap": "95:911:2:-;;;484:10;462:32;;;;;;;;;;;;;;;;;;;;523:42;500:65;;;;;;;;;;;;;;;;;;;;95:911;8:9:-1;5:2;;;30:1;27;20:12;5:2;95:911:2;;;;;;;",
+  "deployedSourceMap": "95:911:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;257:24;;8:9:-1;5:2;;;30:1;27;20:12;5:2;257:24:2;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;257:24:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;257:24:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;462:32;;8:9:-1;5:2;;;30:1;27;20:12;5:2;462:32:2;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;857:147;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;857:147:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;576:187;;8:9:-1;5:2;;;30:1;27;20:12;5:2;576:187:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;576:187:2;;;;;;;;;;;;;;;;;:::i;:::-;;772:80;;8:9:-1;5:2;;;30:1;27;20:12;5:2;772:80:2;;;:::i;:::-;;;;;;;;;;;;;;;;;;;257:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;462:32::-;;;;;;;;;;;;;:::o;857:147::-;952:7;935:4;:14;940:8;935:14;;;;;;;;;;;;;;;:24;;;;990:7;969:10;:17;;;:28;;;;;;;;;;;857:147;;:::o;576:187::-;395:5;;;;;;;;;;;387:13;;:4;;;;;;;;;;;:13;;;379:48;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;645:35;;;;;;;;;;;;;;;;;:10;:20;;:35;;;;;;;;;;;;:::i;:::-;;690:30;;;;;;;;;;;;;;;;;:10;:22;;:30;;;;;;;;;;;;:::i;:::-;;749:7;730:10;:17;;:26;;;;576:187;:::o;772:80::-;808:4;829:10;:17;;;822:24;;772:80;:::o;95:911::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: GPL-3.0\n// contracts/Tokens.sol\npragma solidity >=0.4.22 <0.9.0;\n\n\ncontract DonkeyCoin{\n    \n     struct Tokens {\n           string tokenName;\n           string tokenSymbol;\n            uint tokens  ;         \n        }\n         Tokens public donkeyCoin ;\n         \n          mapping(address=> uint) user;\n          modifier onlyOwner {\n              require(User == owner , 'you are not validated');\n              _;\n          }\n    address public User = msg.sender;\n    address private owner =0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;\n    \n    function setTokens(uint _tokens)public onlyOwner   {\n       \n        donkeyCoin.tokenName = 'DonkeyCoin';\n        donkeyCoin.tokenSymbol = 'DKC';\n        donkeyCoin.tokens= _tokens;\n    }\n    \n   function seeTokens() public returns(uint){\n       return donkeyCoin.tokens;\n   }\n    function getTokenFree(uint _tokens, address _address) public payable{\n        user[_address] = _tokens;\n        donkeyCoin.tokens -= _tokens;\n    }\n}\n\n",
+  "sourcePath": "/Users/akshaymaru/Desktop/works/ethereum-test/contracts/DonkeyCoin.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/DonkeyCoin.sol",
+    "exportedSymbols": {
+      "DonkeyCoin": [
+        177
+      ]
+    },
+    "id": 178,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 90,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "60:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 177,
+        "linearizedBaseContracts": [
+          177
+        ],
+        "name": "DonkeyCoin",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "DonkeyCoin.Tokens",
+            "id": 97,
+            "members": [
+              {
+                "constant": false,
+                "id": 92,
+                "name": "tokenName",
+                "nodeType": "VariableDeclaration",
+                "scope": 97,
+                "src": "153:16:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 91,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "153:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 94,
+                "name": "tokenSymbol",
+                "nodeType": "VariableDeclaration",
+                "scope": 97,
+                "src": "182:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 93,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "182:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 96,
+                "name": "tokens",
+                "nodeType": "VariableDeclaration",
+                "scope": 97,
+                "src": "214:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 95,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "214:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Tokens",
+            "nodeType": "StructDefinition",
+            "scope": 177,
+            "src": "126:121:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 99,
+            "name": "donkeyCoin",
+            "nodeType": "VariableDeclaration",
+            "scope": 177,
+            "src": "257:24:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Tokens_$97_storage",
+              "typeString": "struct DonkeyCoin.Tokens"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 98,
+              "name": "Tokens",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 97,
+              "src": "257:6:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Tokens_$97_storage_ptr",
+                "typeString": "struct DonkeyCoin.Tokens"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 103,
+            "name": "user",
+            "nodeType": "VariableDeclaration",
+            "scope": 177,
+            "src": "304:28:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 102,
+              "keyType": {
+                "id": 100,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "312:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "304:23:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 101,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "322:4:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 113,
+              "nodeType": "Block",
+              "src": "363:94:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 108,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 106,
+                          "name": "User",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 118,
+                          "src": "387:4:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 107,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 121,
+                          "src": "395:5:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "387:13:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "796f7520617265206e6f742076616c696461746564",
+                        "id": 109,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "403:23:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_72e9b173e3b22fe9e9acb61696c90f27507aab82dcfd1e7ccf17771692c37f34",
+                          "typeString": "literal_string \"you are not validated\""
+                        },
+                        "value": "you are not validated"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_72e9b173e3b22fe9e9acb61696c90f27507aab82dcfd1e7ccf17771692c37f34",
+                          "typeString": "literal_string \"you are not validated\""
+                        }
+                      ],
+                      "id": 105,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        300,
+                        301
+                      ],
+                      "referencedDeclaration": 301,
+                      "src": "379:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 110,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "379:48:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 111,
+                  "nodeType": "ExpressionStatement",
+                  "src": "379:48:2"
+                },
+                {
+                  "id": 112,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "443:1:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 114,
+            "name": "onlyOwner",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 104,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "363:0:2"
+            },
+            "src": "344:113:2",
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 118,
+            "name": "User",
+            "nodeType": "VariableDeclaration",
+            "scope": 177,
+            "src": "462:32:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 115,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "462:7:2",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "expression": {
+                "argumentTypes": null,
+                "id": 116,
+                "name": "msg",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 297,
+                "src": "484:3:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_magic_message",
+                  "typeString": "msg"
+                }
+              },
+              "id": 117,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "lValueRequested": false,
+              "memberName": "sender",
+              "nodeType": "MemberAccess",
+              "referencedDeclaration": null,
+              "src": "484:10:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 121,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 177,
+            "src": "500:65:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 119,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "500:7:2",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307835423338446136613730316335363835343564436663423033466342383735663536626564644334",
+              "id": 120,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "523:42:2",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              },
+              "value": "0x5B38Da6a701c568545dCfcB03FcB875f56beddC4"
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 146,
+              "nodeType": "Block",
+              "src": "627:136:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 132,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 128,
+                        "name": "donkeyCoin",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 99,
+                        "src": "645:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Tokens_$97_storage",
+                          "typeString": "struct DonkeyCoin.Tokens storage ref"
+                        }
+                      },
+                      "id": 130,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokenName",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 92,
+                      "src": "645:20:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "446f6e6b6579436f696e",
+                      "id": 131,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "668:12:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_ece62f9eecf240bd80ec7cc97118f2dfd9ddc3e4164bcf708161579ee9c31ed2",
+                        "typeString": "literal_string \"DonkeyCoin\""
+                      },
+                      "value": "DonkeyCoin"
+                    },
+                    "src": "645:35:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 133,
+                  "nodeType": "ExpressionStatement",
+                  "src": "645:35:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 138,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 134,
+                        "name": "donkeyCoin",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 99,
+                        "src": "690:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Tokens_$97_storage",
+                          "typeString": "struct DonkeyCoin.Tokens storage ref"
+                        }
+                      },
+                      "id": 136,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokenSymbol",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 94,
+                      "src": "690:22:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "444b43",
+                      "id": 137,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "715:5:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_f1098dd64f5766795cc5e530aa6523ec8cc43f3822450ae8b6c6c340a6c339d0",
+                        "typeString": "literal_string \"DKC\""
+                      },
+                      "value": "DKC"
+                    },
+                    "src": "690:30:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 139,
+                  "nodeType": "ExpressionStatement",
+                  "src": "690:30:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 144,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 140,
+                        "name": "donkeyCoin",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 99,
+                        "src": "730:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Tokens_$97_storage",
+                          "typeString": "struct DonkeyCoin.Tokens storage ref"
+                        }
+                      },
+                      "id": 142,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokens",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 96,
+                      "src": "730:17:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 143,
+                      "name": "_tokens",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 123,
+                      "src": "749:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "730:26:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 145,
+                  "nodeType": "ExpressionStatement",
+                  "src": "730:26:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 147,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 126,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 125,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 114,
+                  "src": "615:9:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "615:9:2"
+              }
+            ],
+            "name": "setTokens",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 124,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 123,
+                  "name": "_tokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 147,
+                  "src": "595:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 122,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "595:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "594:14:2"
+            },
+            "returnParameters": {
+              "id": 127,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "627:0:2"
+            },
+            "scope": 177,
+            "src": "576:187:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 155,
+              "nodeType": "Block",
+              "src": "813:39:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 152,
+                      "name": "donkeyCoin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 99,
+                      "src": "829:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Tokens_$97_storage",
+                        "typeString": "struct DonkeyCoin.Tokens storage ref"
+                      }
+                    },
+                    "id": 153,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "tokens",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 96,
+                    "src": "829:17:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 151,
+                  "id": 154,
+                  "nodeType": "Return",
+                  "src": "822:24:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 156,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "seeTokens",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 148,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "790:2:2"
+            },
+            "returnParameters": {
+              "id": 151,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 150,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 156,
+                  "src": "808:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 149,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "808:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "807:6:2"
+            },
+            "scope": 177,
+            "src": "772:80:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 175,
+              "nodeType": "Block",
+              "src": "925:79:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 167,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 163,
+                        "name": "user",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 103,
+                        "src": "935:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 165,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 164,
+                        "name": "_address",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 160,
+                        "src": "940:8:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "935:14:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 166,
+                      "name": "_tokens",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 158,
+                      "src": "952:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "935:24:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 168,
+                  "nodeType": "ExpressionStatement",
+                  "src": "935:24:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 173,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 169,
+                        "name": "donkeyCoin",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 99,
+                        "src": "969:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Tokens_$97_storage",
+                          "typeString": "struct DonkeyCoin.Tokens storage ref"
+                        }
+                      },
+                      "id": 171,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "tokens",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 96,
+                      "src": "969:17:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "-=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 172,
+                      "name": "_tokens",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 158,
+                      "src": "990:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "969:28:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 174,
+                  "nodeType": "ExpressionStatement",
+                  "src": "969:28:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 176,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenFree",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 161,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 158,
+                  "name": "_tokens",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 176,
+                  "src": "879:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 157,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "879:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 160,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 176,
+                  "src": "893:16:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 159,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "893:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "878:32:2"
+            },
+            "returnParameters": {
+              "id": 162,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "925:0:2"
+            },
+            "scope": 177,
+            "src": "857:147:2",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 178,
+        "src": "95:911:2"
+      }
+    ],
+    "src": "60:948:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/DonkeyCoin.sol",
+      "exportedSymbols": {
+        "DonkeyCoin": [
+          177
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 90,
+        "name": "PragmaDirective",
+        "src": "60:32:2"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            177
+          ],
+          "name": "DonkeyCoin",
+          "scope": 178
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "DonkeyCoin.Tokens",
+              "name": "Tokens",
+              "scope": 177,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "tokenName",
+                  "scope": 97,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 91,
+                    "name": "ElementaryTypeName",
+                    "src": "153:6:2"
+                  }
+                ],
+                "id": 92,
+                "name": "VariableDeclaration",
+                "src": "153:16:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "tokenSymbol",
+                  "scope": 97,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 93,
+                    "name": "ElementaryTypeName",
+                    "src": "182:6:2"
+                  }
+                ],
+                "id": 94,
+                "name": "VariableDeclaration",
+                "src": "182:18:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "tokens",
+                  "scope": 97,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 95,
+                    "name": "ElementaryTypeName",
+                    "src": "214:4:2"
+                  }
+                ],
+                "id": 96,
+                "name": "VariableDeclaration",
+                "src": "214:11:2"
+              }
+            ],
+            "id": 97,
+            "name": "StructDefinition",
+            "src": "126:121:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "donkeyCoin",
+              "scope": 177,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct DonkeyCoin.Tokens",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Tokens",
+                  "referencedDeclaration": 97,
+                  "type": "struct DonkeyCoin.Tokens"
+                },
+                "id": 98,
+                "name": "UserDefinedTypeName",
+                "src": "257:6:2"
+              }
+            ],
+            "id": 99,
+            "name": "VariableDeclaration",
+            "src": "257:24:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "user",
+              "scope": 177,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => uint256)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => uint256)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 100,
+                    "name": "ElementaryTypeName",
+                    "src": "312:7:2"
+                  },
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 101,
+                    "name": "ElementaryTypeName",
+                    "src": "322:4:2"
+                  }
+                ],
+                "id": 102,
+                "name": "Mapping",
+                "src": "304:23:2"
+              }
+            ],
+            "id": 103,
+            "name": "VariableDeclaration",
+            "src": "304:28:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "onlyOwner",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 104,
+                "name": "ParameterList",
+                "src": "363:0:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_72e9b173e3b22fe9e9acb61696c90f27507aab82dcfd1e7ccf17771692c37f34",
+                                  "typeString": "literal_string \"you are not validated\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                300,
+                                301
+                              ],
+                              "referencedDeclaration": 301,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 105,
+                            "name": "Identifier",
+                            "src": "379:7:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 118,
+                                  "type": "address",
+                                  "value": "User"
+                                },
+                                "id": 106,
+                                "name": "Identifier",
+                                "src": "387:4:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 121,
+                                  "type": "address",
+                                  "value": "owner"
+                                },
+                                "id": 107,
+                                "name": "Identifier",
+                                "src": "395:5:2"
+                              }
+                            ],
+                            "id": 108,
+                            "name": "BinaryOperation",
+                            "src": "387:13:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "796f7520617265206e6f742076616c696461746564",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"you are not validated\"",
+                              "value": "you are not validated"
+                            },
+                            "id": 109,
+                            "name": "Literal",
+                            "src": "403:23:2"
+                          }
+                        ],
+                        "id": 110,
+                        "name": "FunctionCall",
+                        "src": "379:48:2"
+                      }
+                    ],
+                    "id": 111,
+                    "name": "ExpressionStatement",
+                    "src": "379:48:2"
+                  },
+                  {
+                    "id": 112,
+                    "name": "PlaceholderStatement",
+                    "src": "443:1:2"
+                  }
+                ],
+                "id": 113,
+                "name": "Block",
+                "src": "363:94:2"
+              }
+            ],
+            "id": 114,
+            "name": "ModifierDefinition",
+            "src": "344:113:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "User",
+              "scope": 177,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 115,
+                "name": "ElementaryTypeName",
+                "src": "462:7:2"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "member_name": "sender",
+                  "referencedDeclaration": null,
+                  "type": "address payable"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 297,
+                      "type": "msg",
+                      "value": "msg"
+                    },
+                    "id": 116,
+                    "name": "Identifier",
+                    "src": "484:3:2"
+                  }
+                ],
+                "id": 117,
+                "name": "MemberAccess",
+                "src": "484:10:2"
+              }
+            ],
+            "id": 118,
+            "name": "VariableDeclaration",
+            "src": "462:32:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "owner",
+              "scope": 177,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 119,
+                "name": "ElementaryTypeName",
+                "src": "500:7:2"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "307835423338446136613730316335363835343564436663423033466342383735663536626564644334",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "address payable",
+                  "value": "0x5B38Da6a701c568545dCfcB03FcB875f56beddC4"
+                },
+                "id": 120,
+                "name": "Literal",
+                "src": "523:42:2"
+              }
+            ],
+            "id": 121,
+            "name": "VariableDeclaration",
+            "src": "500:65:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "setTokens",
+              "scope": 177,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_tokens",
+                      "scope": 147,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 122,
+                        "name": "ElementaryTypeName",
+                        "src": "595:4:2"
+                      }
+                    ],
+                    "id": 123,
+                    "name": "VariableDeclaration",
+                    "src": "595:12:2"
+                  }
+                ],
+                "id": 124,
+                "name": "ParameterList",
+                "src": "594:14:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 127,
+                "name": "ParameterList",
+                "src": "627:0:2"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 114,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 125,
+                    "name": "Identifier",
+                    "src": "615:9:2"
+                  }
+                ],
+                "id": 126,
+                "name": "ModifierInvocation",
+                "src": "615:9:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "tokenName",
+                              "referencedDeclaration": 92,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 99,
+                                  "type": "struct DonkeyCoin.Tokens storage ref",
+                                  "value": "donkeyCoin"
+                                },
+                                "id": 128,
+                                "name": "Identifier",
+                                "src": "645:10:2"
+                              }
+                            ],
+                            "id": 130,
+                            "name": "MemberAccess",
+                            "src": "645:20:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "446f6e6b6579436f696e",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"DonkeyCoin\"",
+                              "value": "DonkeyCoin"
+                            },
+                            "id": 131,
+                            "name": "Literal",
+                            "src": "668:12:2"
+                          }
+                        ],
+                        "id": 132,
+                        "name": "Assignment",
+                        "src": "645:35:2"
+                      }
+                    ],
+                    "id": 133,
+                    "name": "ExpressionStatement",
+                    "src": "645:35:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "tokenSymbol",
+                              "referencedDeclaration": 94,
+                              "type": "string storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 99,
+                                  "type": "struct DonkeyCoin.Tokens storage ref",
+                                  "value": "donkeyCoin"
+                                },
+                                "id": 134,
+                                "name": "Identifier",
+                                "src": "690:10:2"
+                              }
+                            ],
+                            "id": 136,
+                            "name": "MemberAccess",
+                            "src": "690:22:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "444b43",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"DKC\"",
+                              "value": "DKC"
+                            },
+                            "id": 137,
+                            "name": "Literal",
+                            "src": "715:5:2"
+                          }
+                        ],
+                        "id": 138,
+                        "name": "Assignment",
+                        "src": "690:30:2"
+                      }
+                    ],
+                    "id": 139,
+                    "name": "ExpressionStatement",
+                    "src": "690:30:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "tokens",
+                              "referencedDeclaration": 96,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 99,
+                                  "type": "struct DonkeyCoin.Tokens storage ref",
+                                  "value": "donkeyCoin"
+                                },
+                                "id": 140,
+                                "name": "Identifier",
+                                "src": "730:10:2"
+                              }
+                            ],
+                            "id": 142,
+                            "name": "MemberAccess",
+                            "src": "730:17:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 123,
+                              "type": "uint256",
+                              "value": "_tokens"
+                            },
+                            "id": 143,
+                            "name": "Identifier",
+                            "src": "749:7:2"
+                          }
+                        ],
+                        "id": 144,
+                        "name": "Assignment",
+                        "src": "730:26:2"
+                      }
+                    ],
+                    "id": 145,
+                    "name": "ExpressionStatement",
+                    "src": "730:26:2"
+                  }
+                ],
+                "id": 146,
+                "name": "Block",
+                "src": "627:136:2"
+              }
+            ],
+            "id": 147,
+            "name": "FunctionDefinition",
+            "src": "576:187:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "seeTokens",
+              "scope": 177,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 148,
+                "name": "ParameterList",
+                "src": "790:2:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 156,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 149,
+                        "name": "ElementaryTypeName",
+                        "src": "808:4:2"
+                      }
+                    ],
+                    "id": 150,
+                    "name": "VariableDeclaration",
+                    "src": "808:4:2"
+                  }
+                ],
+                "id": 151,
+                "name": "ParameterList",
+                "src": "807:6:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 151
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "tokens",
+                          "referencedDeclaration": 96,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 99,
+                              "type": "struct DonkeyCoin.Tokens storage ref",
+                              "value": "donkeyCoin"
+                            },
+                            "id": 152,
+                            "name": "Identifier",
+                            "src": "829:10:2"
+                          }
+                        ],
+                        "id": 153,
+                        "name": "MemberAccess",
+                        "src": "829:17:2"
+                      }
+                    ],
+                    "id": 154,
+                    "name": "Return",
+                    "src": "822:24:2"
+                  }
+                ],
+                "id": 155,
+                "name": "Block",
+                "src": "813:39:2"
+              }
+            ],
+            "id": 156,
+            "name": "FunctionDefinition",
+            "src": "772:80:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getTokenFree",
+              "scope": 177,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_tokens",
+                      "scope": 176,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 157,
+                        "name": "ElementaryTypeName",
+                        "src": "879:4:2"
+                      }
+                    ],
+                    "id": 158,
+                    "name": "VariableDeclaration",
+                    "src": "879:12:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_address",
+                      "scope": 176,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 159,
+                        "name": "ElementaryTypeName",
+                        "src": "893:7:2"
+                      }
+                    ],
+                    "id": 160,
+                    "name": "VariableDeclaration",
+                    "src": "893:16:2"
+                  }
+                ],
+                "id": 161,
+                "name": "ParameterList",
+                "src": "878:32:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 162,
+                "name": "ParameterList",
+                "src": "925:0:2"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 103,
+                                  "type": "mapping(address => uint256)",
+                                  "value": "user"
+                                },
+                                "id": 163,
+                                "name": "Identifier",
+                                "src": "935:4:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 160,
+                                  "type": "address",
+                                  "value": "_address"
+                                },
+                                "id": 164,
+                                "name": "Identifier",
+                                "src": "940:8:2"
+                              }
+                            ],
+                            "id": 165,
+                            "name": "IndexAccess",
+                            "src": "935:14:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 158,
+                              "type": "uint256",
+                              "value": "_tokens"
+                            },
+                            "id": 166,
+                            "name": "Identifier",
+                            "src": "952:7:2"
+                          }
+                        ],
+                        "id": 167,
+                        "name": "Assignment",
+                        "src": "935:24:2"
+                      }
+                    ],
+                    "id": 168,
+                    "name": "ExpressionStatement",
+                    "src": "935:24:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "-=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "tokens",
+                              "referencedDeclaration": 96,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 99,
+                                  "type": "struct DonkeyCoin.Tokens storage ref",
+                                  "value": "donkeyCoin"
+                                },
+                                "id": 169,
+                                "name": "Identifier",
+                                "src": "969:10:2"
+                              }
+                            ],
+                            "id": 171,
+                            "name": "MemberAccess",
+                            "src": "969:17:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 158,
+                              "type": "uint256",
+                              "value": "_tokens"
+                            },
+                            "id": 172,
+                            "name": "Identifier",
+                            "src": "990:7:2"
+                          }
+                        ],
+                        "id": 173,
+                        "name": "Assignment",
+                        "src": "969:28:2"
+                      }
+                    ],
+                    "id": 174,
+                    "name": "ExpressionStatement",
+                    "src": "969:28:2"
+                  }
+                ],
+                "id": 175,
+                "name": "Block",
+                "src": "925:79:2"
+              }
+            ],
+            "id": 176,
+            "name": "FunctionDefinition",
+            "src": "857:147:2"
+          }
+        ],
+        "id": 177,
+        "name": "ContractDefinition",
+        "src": "95:911:2"
+      }
+    ],
+    "id": 178,
+    "name": "SourceUnit",
+    "src": "60:948:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x221366B1020d1ED14710E8C53dFf97186141cf48",
+      "transactionHash": "0x38eacfd47f484ffba941e955ad9bf93cf59614ff056bc60bd33de6b324213866"
+    }
+  },
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-09-08T09:39:41.469Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

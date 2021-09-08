@@ -80,7 +80,7 @@
   "sourceMap": "66:284:1:-;;;104:4;82:26;;66:284;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:284:1;;;;;;;",
   "deployedSourceMap": "66:284:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:284:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;111:70;;;:::i;:::-;;;;;;;;;;;;;;;;;;;182:82;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;182:82:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;265:83;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;265:83:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;82:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;111:70;153:4;171:7;;164:14;;111:70;:::o;182:82::-;227:4;255:6;245:7;;:16;;;;;;;;;;238:23;;182:82;;;:::o;265:83::-;311:4;339:6;329:7;;:16;;;;;;;;;;322:23;;265:83;;;:::o;82:26::-;;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Data {\nuint public balance = 5000;\n\nfunction getBalance() public view returns(uint){\n    return balance;\n}\nfunction Deposit(uint amount) public returns(uint){\n    return balance+= amount;\n}\nfunction Withdraw(uint amount) public returns(uint){\n    return balance-= amount;\n}\n}",
-  "sourcePath": "/Users/akshaymaru/Desktop/ethereum-test/contracts/Data.sol",
+  "sourcePath": "/Users/akshaymaru/Desktop/works/ethereum-test/contracts/Data.sol",
   "ast": {
     "absolutePath": "project:/contracts/Data.sol",
     "exportedSymbols": {
@@ -1016,8 +1016,7 @@
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-08-21T06:28:54.826Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-09-08T09:37:04.118Z",
   "devdoc": {
     "methods": {}
   },
